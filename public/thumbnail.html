@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href="thumbnail.css">
+    <title>Thumbnail</title>
+</head>
+
+<body>
+    <!-- title & text clear -->
+    <h1> Import thumbanil from video file </h1>
+    
+    <div class="player">
+        <video id="video-container" controls>
+            <source src="/resource/MEUE42GWSGL080001400.mp4" type="video/mp4">
+            <source src="/resource/MIAI44GBSGL150000100.mp4" type="video/mp4">
+        </video>
+        <div class="controls">
+            <button class="play" data-icon="P" aria-label="play pause toggle"></button>
+            <button class="stop" data-icon="S" aria-label="stop"></button>
+            <div class="timer">
+                <div></div>
+                <span aria-label="timer">00:00</span>
+            </div>          
+            <button class="rwd" data-icon="B" aria-label="rewind"></button>
+            <button class="fwd" data-icon="F" aria-label="fast forward"></button>  
+        </div>
+    </div> 
+    <script src="thumbnail.js"></script>
+    
+</body>
+
+</html>

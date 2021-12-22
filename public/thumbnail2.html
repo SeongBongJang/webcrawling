@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://rawgit.com/allensarkisyan/VideoFrame/master/VideoFrame.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thumbnail</title>
+</head>
+
+<body>
+    <!-- title & text clear -->
+    <h1> Thumbnail extraction </h1>
+    <p> The path of the video image should be /c/user/amuzlab/workspace/resource. </p>
+
+    <!-- input -->
+    <input type="file" id="file-input" accept="video/mp4,video/mkv, video/x-m4v,video/*" multiple /><br>
+
+    <!-- video  / timer-->
+    <div>
+        <video controls id='video-player'>
+            <source id="video-source" type="video/mp4" src='/resource/MEUE42GWSGL080001400.mp4'>
+        </video> <br>
+        <!-- frame info -->
+        <hr>
+        <div class="frame">
+            <button id="prev-frame">-Frame</button>
+            <button id="next-frame">+Frame</button>
+        </div>
+        <div class="timer">
+            frame : <span aria-label="current-frame" id="current-frame">0</span><br>
+            timer : <span aria-label="timer" id="timer">00:00:00.000000</span><br>
+            milliseconds : <span aria-label="timer" id="milli-seconds">0.000000</span>
+        </div>
+    </div>
+
+
+
+    <!-- thumbnail capture -->
+    <hr>
+    <div>
+        <p>capture list</p>
+        <button id="capture-btn">Capture</button>
+        <div id="capture"></div>
+    </div>
+
+    <!-- timestamp thumbnail -->
+    <hr>
+    <div>
+        <p>timestamp thumbnails</p>
+        <button id="pass-capture-btn">PASS Capture</button>
+        <div id="thumbnail-list">
+
+        </div>
+    </div>
+    <script src="thumbnail2.js"></script>
+</body>
+
+</html>
