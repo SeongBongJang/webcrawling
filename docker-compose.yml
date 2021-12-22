@@ -1,0 +1,19 @@
+version: '3'
+services:
+    sample:
+        image: centos:centos7
+        container_name: sample_server
+        restart: always
+        hostname: sample
+        network_mode: "sample"
+        ports:
+          - "8080:8080"
+        env_file:
+          - .env
+        volumes:
+          - type: bind
+            source: /etc/localtime
+            target: /etc/localtime
+            read_only: true
+          - /c/Users/amuzlab/workspace/resources:/mnt/resource
+        command: [/usr/sbin/init]
